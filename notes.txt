@@ -25,3 +25,11 @@
 
     click shift + enter to run jupitor notebook cell 
 
+5. to ignore venv dir pushing in git
+    add **/.venv*/ in .gitignore
+    - After updating .gitignore, if venv/ is already being tracked by Git, you must remove it from Git tracking:
+        git rm -r --cached venv/
+        git commit -m "Stop tracking virtual environment"
+
+
+
