@@ -1,0 +1,27 @@
+1. install python :
+    $ brew install python
+
+2. install  conda in mac:
+    brew install --cask anaconda
+    export PATH="/opt/homebrew/anaconda3/bin:$PATH"
+    source ~/.zshrc  # or source ~/.bashrc / source ~/.bash_profile
+
+    -- Type conda in the terminal. If the installation was successful, you should see the Conda help message. 
+
+3. create venv for running python :
+    steps:
+    1. conda create -p venv python==3.13.4 
+    2. conda activate venv/ 
+    3. source activate base # ( this would activate your conda base env ) --> run this if you got CondaError: Run 'conda init' before 'conda activate'
+        once above step complted run again step:2
+    
+    Now you can run python in this dir
+    Eg. Create file with .py ext and type python <file-name>.py in terminal.
+
+4. You can use jupitor file in vscode
+    create file with ext .ipynb -> this will create same file as jupitore notebook. And gives you same interface as anaconda jupitor.
+    For use this same venv for jupitor notebook file --> click on detect kerel in top right corner and select your created venv.
+    now you can you can use 
+
+    click shift + enter to run jupitor notebook cell 
+
