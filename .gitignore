@@ -1,8 +1,8 @@
 # Ignore virtual environment
-venv/
-.venv/
 
 **/.venv*/
 
-**/venv/
-**/.venv/
+# **/.<env-name>*/
+**/.virtual_env*/
+**/.my-env*/
+

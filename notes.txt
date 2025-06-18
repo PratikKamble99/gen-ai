@@ -31,5 +31,20 @@
         git rm -r --cached venv/
         git commit -m "Stop tracking virtual environment"
 
+6. Different ways to craete  virtual-env
+    a. using conda - refer to point 3 
+    
+    b. using python only
+        commands:
+        -- python -m venv <env-name>
+        -- source <env-name>/bin/activate ( Mac )
+        -- <env-name>\Scripts\activate ( Windows )
 
+    c. using virtualenv package
+        commands:
+        -- pip install virtualenv
+        -- virtualenv -p python3 <env-name>
+        -- source <env-name>/bin/activate ( Mac )
+        -- <env-name>\Scripts\activate  ( Windows )
 
+    NOTE: run decativate for decativate venv
