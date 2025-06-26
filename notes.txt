@@ -3,8 +3,12 @@
 
 2. install  conda in mac:
     brew install --cask anaconda
-    export PATH="/opt/homebrew/anaconda3/bin:$PATH"
-    source ~/.zshrc  # or source ~/.bashrc / source ~/.bash_profile
+    export PATH="/opt/homebrew/anaconda3/bin:$PATH"  # This will only export path for single session only 
+    
+    # To add a permanent path, use the below command 
+    echo 'export PATH="/opt/homebrew/anaconda3/bin:$PATH"' >> ~/.zshrc  # you can use >> ~/.bashrc instead of >> ~/.zshrc if your are using bash
+
+    source ~/.zshrc  # or source ~/.bashrc / source ~/.bash_profile  # This will restart your shell
 
     -- Type conda in the terminal. If the installation was successful, you should see the Conda help message. 
 
