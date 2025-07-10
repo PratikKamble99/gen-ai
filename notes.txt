@@ -52,3 +52,14 @@
         -- <env-name>\Scripts\activate  ( Windows )
 
     NOTE: run decativate for decativate venv
+
+7. Ways to install packages
+    a. direct install using pip : pip install numpy
+    b. from requirments.txt file: pip install -r requirements.txt
+
+8. Creating own packages in python
+    -- create packages folder in project
+    -- in packages create file __init__.py --> It marks a directory as a Python package ( this is must file )
+    -- create file with your package name eg. add.py --> and write function which you want to import
+    -- same steps follow for creating subpackages
+    -- use : from packages.subpackages import mult

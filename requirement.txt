@@ -1,2 +1,0 @@
-// This file tracks which packages need to insall
-ipykernel
