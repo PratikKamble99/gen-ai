@@ -12,49 +12,31 @@
 
     -- Type conda in the terminal. If the installation was successful, you should see the Conda help message. 
 
-3. create venv for running python :
-    steps:
-    1. conda create -p venv python==3.13.4 
-    2. conda activate venv/ 
-    3. source activate base # ( this would activate your conda base env ) --> run this if you got CondaError: Run 'conda init' before 'conda activate'
-        once above step complited run again step:2
-    
-    Now you can run python in this dir
-    Eg. Create file with .py ext and type python <file-name>.py in terminal.
+3. Different ways to create  virtual-env
+    a. using conda - 
+     steps:
+        1. conda create -p <venv_name> python==3.13.4 
+        2. conda activate venv/ 
+        3. source activate base # ( this would activate your conda base env ) --> run this if you got CondaError: Run 'conda init' before 'conda activate'
+            once above step completed run again step:2
+        
+        Now you can run python in this dir
+        Eg. Create file with .py ext and type python <file-name>.py in terminal.
 
-    IMP:- virtual env remains active across directories until you explicitly deactivate it. 
-    So decativate before closing project ussing "deactivate' command.
+        IMP:- virtual env remains active across directories until you explicitly deactivate it. 
+        So deactivate before closing project using "deactivate' command.
 
 
-    If you deleted the environment
-    You'll need to recreate it:
+        If you deleted the environment
+        You'll need to recreate it:
+        
+        pip install ipykernel
+        python -m ipykernel install --user --name venv --display-name "Python (venv)"
 
-    # For pip/venv
-    python -m venv venv
-    source venv/bin/activate
-    pip install ipykernel
-    python -m ipykernel install --user --name venv --display-name "Python (venv)"
-
-    # For conda
-    conda create -n venv python=3.11
-    conda activate venv
-    python -m ipykernel install --user --name venv --display-name "Python (venv)"
-
-4. You can use jupitor file in vscode
-    create file with ext .ipynb -> this will create same file as jupitore notebook. And gives you same interface as anaconda jupitor.
-    For use this same venv for jupitor notebook file --> click on detect kerel in top right corner and select your created venv.
-    now you can you can use 
-
-    click shift + enter to run jupitor notebook cell 
-
-5. to ignore venv dir pushing in git
-    add **/.venv*/ in .gitignore
-    - After updating .gitignore, if venv/ is already being tracked by Git, you must remove it from Git tracking:
-        git rm -r --cached venv/
-        git commit -m "Stop tracking virtual environment"
-
-6. Different ways to craete  virtual-env
-    a. using conda - refer to point 3 
+        # For conda
+        conda create -n venv python=3.11
+        conda activate venv
+        python -m ipykernel install --user --name venv --display-name "Python (venv)"
     
     b. using python only
         commands:
@@ -71,13 +53,34 @@
 
     NOTE: run deactivate for deactivate venv
 
-7. Ways to install packages
-    a. direct install using pip : pip install numpy
-    b. from requirments.txt file: pip install -r requirements.txt
+4. Ways to install packages
+        a. direct install using pip : pip install numpy
+        b. from requirments.txt file: pip install -r requirements.txt
 
-8. Creating own packages in python
+5. You can use jupiter file in vscode
+    create file with ext .ipynb -> this will create same file as jupitore notebook. And gives you same interface as anaconda jupitor.
+    For use this same venv for jupitor notebook file --> click on detect kerel in top right corner and select your created venv.
+    now you can you can use 
+
+    click shift + enter to run jupiter notebook cell 
+
+6. to ignore venv dir pushing in git
+    add **/.venv*/ in .gitignore
+    - After updating .gitignore, if venv/ is already being tracked by Git, you must remove it from Git tracking:
+        git rm -r --cached venv/
+        git commit -m "Stop tracking virtual environment"
+
+7. Creating own packages in python
     -- create packages folder in project
     -- in packages create file __init__.py --> It marks a directory as a Python package ( this is must file )
     -- create file with your package name eg. add.py --> and write function which you want to import
     -- same steps follow for creating subpackages
     -- use : from packages.subpackages import mult
+
+
+IMP- Everything in python is Object
+    eg. Number, Boolean
+    Code:
+        age = 2 // reference to address of 2 in memory
+        age = 12 // when you update value it does not not update value of va, it change reference of age var to address of 12 in memory
+        name = 2 // same referencing  to address of 2 in memory ie age referencing

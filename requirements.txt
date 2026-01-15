@@ -1,3 +1,4 @@
 # This file tracks which packages need to insall
 ipykernel
 numpy
+requests=2.31.0 # This is how you specify a specific version
