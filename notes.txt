@@ -58,6 +58,12 @@
         a. direct install using pip : pip install numpy
         b. from requirments.txt file: pip install -r requirements.txt
 
+# Select Interpreter for your virtual environment`
+    cmd+p
+    type: > Python: select interpreter 
+    copy absolute path of your python from virtual environment
+    pase it in Enter interpreter path option
+
 5. You can use jupiter file in vscode
     create file with ext .ipynb -> this will create same file as jupitore notebook. And gives you same interface as anaconda jupitor.
     For use this same venv for jupitor notebook file --> click on detect kerel in top right corner and select your created venv.

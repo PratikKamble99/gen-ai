@@ -1,5 +1,3 @@
 # This file tracks which packages need to insall
 ipykernel
 numpy
-requests # This is how you specify a specific version
-aiohttp
