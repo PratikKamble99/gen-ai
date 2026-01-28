@@ -42,7 +42,8 @@
         commands:
         -- python -m venv <env-name>
         -- source <env-name>/bin/activate ( Mac )
-        -- <env-name>\Scripts\activate ( Windows )
+        -- source <env-name>\Scripts\activate ( Windows:bash )
+        -- <env-name>\Scripts\activate..ps1 ( Windows:PowerShell )
 
     c. using virtualenv package
         commands:
@@ -84,3 +85,16 @@ IMP- Everything in python is Object
         age = 2 // reference to address of 2 in memory
         age = 12 // when you update value it does not not update value of va, it change reference of age var to address of 12 in memory
         name = 2 // same referencing  to address of 2 in memory ie age referencing
+
+
+8.  - process is an independent program in execution
+    - A thread is the smallest unit of execution within a process.
+
+    - Process have its own isolate memory. 
+    - while threads share memory within the same process
+
+9.  async def (coroutine):-  a specialized function that can pause its execution and yield control back to an event loop or caller, 
+                allowing other tasks to run
+    await:- Pauses execution until the result is ready
+    asyncio:- Build in python library
+    Event loop: same functionality as JS - The engine that runs and schedule co-routine in python
