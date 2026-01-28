@@ -98,3 +98,7 @@ IMP- Everything in python is Object
     await:- Pauses execution until the result is ready
     asyncio:- Build in python library
     Event loop: same functionality as JS - The engine that runs and schedule co-routine in python
+
+10. Adding profiler:
+    python -m cProfile -s time 08_non_daemon.py
+    This command will show you logs of your program
