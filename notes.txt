@@ -58,6 +58,9 @@
         a. direct install using pip : pip install numpy
         b. from requirments.txt file: pip install -r requirements.txt
 
+# Create requirements.txt file from already present packages from project
+    pip freeze > requirements.txt
+
 # Select Interpreter for your virtual environment`
     cmd+p
     type: > Python: select interpreter 
@@ -108,3 +111,22 @@ IMP- Everything in python is Object
 10. Adding profiler:
     python -m cProfile -s time 08_non_daemon.py
     This command will show you logs of your program
+
+11. Prompt techniques:
+    - Aplaca Prompt:
+
+    ## Instruction
+    ## Question
+    ## Response
+
+    - ChatML:
+        {
+            "role":"system"|"user"|"assistant",
+            "content":""
+        }
+        
+    - INST Format:
+        <|begin_of_text|>
+        <|system|>
+        <|user|>
+        <|assistant|>
