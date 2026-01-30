@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Todo App</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <main class="app">
+            <header class="header">
+                <h1>Todo</h1>
+                <p class="subtitle">
+                    A tiny HTML/CSS/JS todo with localStorage.
+                </p>
+            </header>
+
+            <section class="card">
+                <form id="todo-form" class="form" autocomplete="off">
+                    <input
+                        id="todo-input"
+                        class="input"
+                        type="text"
+                        placeholder="Add a task…"
+                        required
+                    />
+                    <button class="btn primary" type="submit">Add</button>
+                </form>
+
+                <div class="toolbar">
+                    <div class="filters">
+                        <button
+                            class="chip active"
+                            data-filter="all"
+                            type="button"
+                        >
+                            All
+                        </button>
+                        <button class="chip" data-filter="active" type="button">
+                            Active
+                        </button>
+                        <button
+                            class="chip"
+                            data-filter="completed"
+                            type="button"
+                        >
+                            Completed
+                        </button>
+                    </div>
+
+                    <div class="actions">
+                        <span id="counter" class="counter">0 items</span>
+                        <button
+                            id="clear-completed"
+                            class="btn danger"
+                            type="button"
+                        >
+                            Clear completed
+                        </button>
+                    </div>
+                </div>
+
+                <ul id="todo-list" class="list"></ul>
+                <footer class="footer">
+                    <small>Double-click a task to edit.</small>
+                </footer>
+            </section>
+        </main>
+
+        <script src="app.js"></script>
+    </body>
+</html>

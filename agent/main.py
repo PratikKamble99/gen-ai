@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 import requests
 from typing import Optional
 from pydantic import BaseModel, Field
+import os
 
 class OutputFormat(BaseModel):
     step: str = Field(..., description="The id of the step, Example: PLAN, OUTPUT, TOOL, etc")
@@ -51,6 +52,7 @@ SYSTEM_PROMPT="""
 
     AVAILABLE TOOLS:
     - get_weather(city:str): Takes city name as input string and returns the weather information.
+    - run_command(cmd:str): Takes system linux command as string input string and and execute this on user's system and returns output from that command.
 
     Example 1:
     START: {"step":"START", "input":"What is weather in goa?"}
@@ -81,8 +83,13 @@ def get_weather(city: str):
     
     return "Something went wrong"
 
+def run_command(cmd:str):
+    result = os.system(cmd)
+    return result
+
 available_tools= {
-    "get_weather": get_weather
+    "get_weather": get_weather,
+    "run_command":run_command
 }
 
 def main():
