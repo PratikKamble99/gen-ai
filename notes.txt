@@ -38,9 +38,11 @@
         conda activate venv
         python -m ipykernel install --user --name venv --display-name "Python (venv)"
     
+    ## LIST ALL INSTALLED PYTHON VERSIONS : py -0
     b. using python only
         commands:
         -- python -m venv <env-name>
+        -- py -3.10(python version) -m venv <env-name> ( Create virtualenv with specific python version)
         -- source <env-name>/bin/activate ( Mac )
         -- source <env-name>\Scripts\activate ( Windows:bash )
         -- <env-name>\Scripts\activate..ps1 ( Windows:PowerShell )
@@ -130,3 +132,19 @@ IMP- Everything in python is Object
         <|system|>
         <|user|>
         <|assistant|>
+
+12. Memory in AI and Agents
+    Types of memory
+    1. Short Term Memory (STM)
+        - While you re in session, task is getting performed
+    2. Long term Memory (LTM)
+        - Stays forever
+        a. Factual Memory - facts about user ( name, age ect) - Always ned to be into context
+        b. Episodic Memory - Memory about past interactions
+        c. Semantic Memory - General
+
+        If you inject whole long term memory in context It will get out of context window. So to avoid that we uses Factual, Episodic and Semantic memory
+
+# Graph Memory uses Graph Databases which use Cypher queries to read and write in Db
+    Eg. neo4j
+
