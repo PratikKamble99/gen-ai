@@ -33,6 +33,9 @@ graph_builder.add_edge(START, "chat_bot")
 graph_builder.add_edge("chat_bot", END)
 
 # ADD CHECKPOINTER TO GRAPH
+'''
+    checkpoint is a saved snapshot of a model's entire internal state
+'''
 def compile_graph_with_checkpointer(checkpointer):
     return graph_builder.compile(checkpointer=checkpointer)
 
